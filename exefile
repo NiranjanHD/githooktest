@@ -1,0 +1,4 @@
+cd /root/some
+docker container rm -f centos-ready
+docker build -t centos-ready /root/some/
+docker container run -d --name centos-ready -p 80:80 -v /root/some/:/var/www/html/ centos
